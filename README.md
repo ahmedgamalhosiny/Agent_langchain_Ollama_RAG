@@ -32,9 +32,9 @@ An AI-powered restaurant assistant that provides Q&A based on customer reviews a
 
 ![Order Mode](images/two.PNG)
 
-### Analytics Dashboard
+### Email with order
 
-![Analytics Dashboard](images/three.PNG)
+![Email with order](images/three.PNG)
 
 ## Tech Stack
 
