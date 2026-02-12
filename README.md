@@ -48,14 +48,16 @@ An AI-powered restaurant assistant that provides Q&A based on customer reviews a
 
 ## Setup
 
-### Prerequisites
+### Option 1: Local Setup
+
+#### Prerequisites
 
 1. **Python 3.11+** installed
 2. **Ollama** installed and running with models:
    - `llama3.2` - for chat responses
    - `mxbai-embed-large` - for embeddings
 
-### Installation
+#### Installation
 
 1. Install dependencies:
 
@@ -80,6 +82,39 @@ RESTAURANT_EMAIL=restaurant@example.com
 ```
 
 **Note**: For Gmail, you need to use an [App Password](https://support.google.com/accounts/answer/185833).
+
+#### Running the Application
+
+### Option 2: Docker Setup
+
+#### Prerequisites
+
+1. **Docker** and **Docker Compose** installed
+
+#### Running with Docker
+
+1. Pull the required Ollama models (run once):
+
+```bash
+docker run --rm -it ollama/ollama:latest pull llama3.2
+docker run --rm -it ollama/ollama:latest pull mxbai-embed-large
+```
+
+2. Start the services:
+
+```bash
+docker-compose up -d
+```
+
+The application will be available at `http://localhost:8501`
+
+To stop the services:
+
+```bash
+docker-compose down
+```
+
+**Note**: ChromaDB data and email configuration (.env) are persisted via Docker volumes.
 
 ## Running the Application
 
